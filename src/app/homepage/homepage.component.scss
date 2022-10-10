@@ -1,0 +1,61 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+    
+
+  }
+ 
+  .card-container .card:not(:last-child) {
+    margin-right: 0;
+  }
+  .card-container .card:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .card.card-small {
+    height: 16px;
+    width: 168px;
+  }
+
+  .card-container .card:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  .card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  .card-container .card:not(.highlight-card):hover .material-icons path {
+    fill: rgb(105, 103, 103);
+  }
+  .card1 {
+    background-color: rgb(120, 120, 202);
+    color: black;
+    font-style: italic;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 1%;
+    padding:2%;
+  }
+  .card2 {
+    background-color: rgb(120, 120, 202);
+    color: black;
+    font-style: italic;
+    font-weight: bold;
+    margin: 1%;
+    padding:2%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .card3 {
+    background-color: rgb(120, 120, 202);
+    color: black;
+    font-style: italic;
+    font-weight: bold;
+    margin: 1%;
+    padding:2%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
