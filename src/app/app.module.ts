@@ -10,7 +10,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HomepageComponent } from './homepage/homepage.component';
 import { RouterModule } from '@angular/router';
 import { SignupComponent } from './signup/signup.component';
-
+ 
 @NgModule({
   declarations: [
     AppComponent,

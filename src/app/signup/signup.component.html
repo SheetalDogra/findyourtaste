@@ -3,18 +3,20 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
   <img width="40" alt=" Logo" src="" />
-  <span>Find Your Taste.... </span>
+  <span class="title">Find Your Taste.... </span>
+  
 </div>
-<div class="body">
+<div class="body" [ngStyle]="{'background' : 'url(assets/images/img3.jpg)'}">
   <div class="content" role="main">
     <!-- Highlight Card -->
     <div class="card highlight-card card-small">
-      <span>{{ title }}</span>
+      <span class="title">Read blogs or write your own blog</span>
     </div>
 
     <!-- Resources -->
-    <h2>Foodies Quotes</h2>
-    <p>We like it... We write it..</p>
+    <h2 class="Quotes">We're foodies...</h2>
+    <p class="Quotes">We like it... We write it..</p><br>
+    <p class="Quotes">Life is uncertain. Eat dessert first.</p>
 
     <!-- <div class="card-container">
       <mat-card class="card1">
@@ -37,7 +39,7 @@
     <div class="card-container">
         
         <div class="card-body">
-            <h5 class="card-header">Registration Form</h5>
+            <h5 class="card-header">Signup Here</h5>
           <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <div class="form-row">
               <div class="form-group col-5">
@@ -84,7 +86,7 @@
             </div>
       
             <div class="text-center">
-              <button class="btn btn-primary mr-1">Register</button>
+              <button class="btn btn-primary mr-1">Submit</button>
               <button class="btn btn-secondary" type="reset" (click)="onReset()">
                 Cancel
               </button>

@@ -12,7 +12,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 export class SignupComponent implements OnInit {
   
   submitted = false;
-  title = 'Read blogs or write your own blog';
+  
   registerForm: any;
 
   constructor(private formBuilder: FormBuilder,private router: Router) {}
@@ -34,21 +34,25 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmit() {
-    this.submitted = true;
-    this.router.navigate(['/home']);
-
     if (this.registerForm.invalid) {
-      return;
+      this.submitted = false;
+    alert ("submit all details");
+    }
+    else  {
+      this.submitted = true;
+      this.router.navigate(['/home']);
+      alert(
+        'SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4)
+      );
     }
 
-    alert(
-      'SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4)
-    );
+    
   }
 
   onReset() {
     this.submitted = false;
     this.registerForm.reset();
   }
+  
 
 }
