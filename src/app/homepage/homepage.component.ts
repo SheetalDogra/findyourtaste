@@ -12,8 +12,12 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
   logout(){
     this.router.navigate(['/signup']);
+  }
+  readfeed() {
+    this.router.navigate(['/blogfeed']);
   }
 
 }

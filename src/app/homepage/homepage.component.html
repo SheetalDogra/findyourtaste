@@ -9,14 +9,20 @@
 <div class="card-container">
     <mat-card class="card1">
       <mat-card-content>
-        <p  class="title">Write your own blog</p>
+        <p  class="title">Write your own blog...</p>
+        <!-- <input matInput [(ngModel)]="blog"> -->
+        <textarea matInput placeholder="Write here....."></textarea><br>
+        <!-- <img mat-card-image  src="assets/images/writing-blog.jpg" alt="Photo"> -->
+        <button class="btn btn-primary mr-1">Post</button>
+        <button class="btn btn-secondary ">Cancel</button>
         <img mat-card-image  src="assets/images/writing-blog.jpg" alt="Photo">
       </mat-card-content>
     </mat-card>
     <mat-card class="card2">
       <mat-card-content>
-        <p  class="title">Read food blogs</p>
-        <img mat-card-image  src="assets/images/read.png" alt="Photo">
+        <button style="background-color: aliceblue; border: none; padding: 5%; margin: 3%;"  class="title" (click)="readfeed()"> Read food blogs</button>
+
+        <img mat-card-image (click)="readfeed()"  src="assets/images/read.png" alt="Photo">
       </mat-card-content>
     </mat-card>
     <mat-card class="card3">
