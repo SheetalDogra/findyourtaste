@@ -1,13 +1,10 @@
-
-
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
   <img width="40" alt=" Logo" src="" />
   <span class="title">Find Your Taste.... </span>
-  
 </div>
-<div class="body" [ngStyle]="{'background' : 'url(assets/images/img3.jpg)'}">
-  <!-- <div class="body" > -->
+<!-- <div class="body" [ngStyle]="{ background: 'url(assets/images/img3.jpg)' }"> -->
+  <div class="body" >
   <div class="content" role="main">
     <!-- Highlight Card -->
     <div class="card highlight-card card-small">
@@ -16,7 +13,8 @@
 
     <!-- Resources -->
     <h2 class="Quotes">We're foodies...</h2>
-    <p class="Quotes">We like it... We write it..</p><br>
+    <p class="Quotes">We like it... We write it..</p>
+    <br />
     <p class="Quotes">Life is uncertain. Eat dessert first.</p>
 
     <!-- <div class="card-container">
@@ -36,65 +34,82 @@
         </mat-card-content>
       </mat-card>
     </div> -->
-   
+
     <div class="card-container">
-        
-        <div class="card-body">
-            <h5 class="card-header">Signup Here</h5>
-          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-            <div class="form-row">
-              <div class="form-group col-5">
-                <label>First Name</label>
-                <input
-                  type="text"
-                  formControlName="firstName"
-                  class="form-control"
-                  [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"
-                />
-                <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
-                  <div *ngIf="f.firstName.errors.required">
-                    First Name is required
-                  </div>
-                </div>
-              </div>
-              <div class="form-group col-5">
-                <label>Last Name</label>
-                <input
-                  type="text"
-                  formControlName="lastName"
-                  class="form-control"
-                  [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }"
-                />
-                <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
-                  <div *ngIf="f.lastName.errors.required">Last Name is required</div>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Email</label>
-              <input
-                type="text"
-                formControlName="email"
-                class="form-control"
-                [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
-              />
-              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-                <div *ngIf="f.email.errors.required">Email is required</div>
-                <div *ngIf="f.email.errors.email">
-                  Email must be a valid email address
-                </div>
-              </div>
-            </div>
-      
-            <div class="text-center">
-              <button class="btn btn-primary mr-1">Submit</button>
-              <button class="btn btn-secondary" type="reset" (click)="onReset()">
-                Cancel
-              </button>
-            </div>
+      <div class="card-body">
+        <h5 class="card-header">Old user? <a routerLink="/Login">Click here to login..</a></h5>
+        <h5 class="card-header">Signup Here</h5>
+        <mat-card-content>
+          <form class="example-form">
+            <table class="example-full-width" cellspacing="5">
+              <tr>
+                <td>
+                  <mat-form-field class="example-full-width" style="width:400px !important">
+                    
+                    <input 
+                      matInput
+                      placeholder="Username"
+                      [(ngModel)]="username"
+                      name="username"
+                      required
+                    />
+               
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <mat-form-field class="example-full-width" style="width:400px !important">
+                    <input
+                      matInput
+                      placeholder="Password"
+                      [(ngModel)]="password"
+                      type="password"
+                      name="password"
+                      required
+                    />
+                  </mat-form-field>
+                </td>
+              </tr>
+                <tr>
+                <td>
+                  <mat-form-field class="example-full-width" style="width:400px !important">
+                    <input
+                      matInput
+                      placeholder="mail"
+                      [(ngModel)]="mail"
+                      type="mail"
+                      name="mail"
+                      required
+                    />
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <mat-form-field class="example-full-width" style="width:400px !important">
+                    <input
+                      matInput
+                      placeholder="Contact no"
+                      [(ngModel)]="contact"
+                      type="number"
+                      name="number"
+                      required
+                    />
+                  </mat-form-field>
+                </td>
+              </tr>
+            </table>
           </form>
-        </div>
+          <!-- <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner> -->
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button  (click)="onSubmit()" color="primary">
+            Submit
+          </button>
+          
+        </mat-card-actions>
       </div>
-      
+    </div>
   </div>
 </div>
