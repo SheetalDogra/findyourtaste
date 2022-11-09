@@ -49,7 +49,7 @@ import {CdkMenuModule} from '@angular/cdk/menu';
 import {DialogModule} from '@angular/cdk/dialog';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { HeaderComponent } from './header/header.component';
-
+import { DataService } from './data.service';
 
  
 @NgModule({
@@ -116,7 +116,7 @@ import { HeaderComponent } from './header/header.component';
     
 
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

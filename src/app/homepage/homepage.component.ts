@@ -1,65 +1,67 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { finalize, Subscription } from 'rxjs';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-
-
-
+import { HttpEventType } from '@angular/common/http';
+import { BlogfeedComponent } from '../blogfeed/blogfeed.component';
+import { DataService } from '../data.service';
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.scss']
+  styleUrls: ['./homepage.component.scss'],
 })
 export class HomepageComponent implements OnInit {
-  // @Input()
-  // requiredFileType:any;
+  @Input()
+  requiredFileType: any;
 
-  // fileName = '';
-  // uploadProgress:any;
-  // uploadSub: any;
+  fileName: any;
+  uploadProgress: any;
+  uploadSub: any;
+  http: any;
+  blogdata: any;
+  blogtext: any;
+  textUpload: any;
+  imagefile: any;
+  showMsg: Boolean;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private dataService: DataService) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  onFileSelected(event: any) {
+    var reader = new FileReader();
+    reader.readAsDataURL(event.target.files[0]);
+    reader.onload = (_event) => {
+      this.fileName = reader.result;
+    };
   }
-//   onFileSelected(event: { target: { files: File[]; }; }) {
-//     const file:File = event.target.files[0];
-  
-//     if (file) {
-//         this.fileName = file.name;
-//         const formData = new FormData();
-//         formData.append("thumbnail", file);
 
-//         const upload$ = this.http.post("/api/thumbnail-upload", formData, {
-//             reportProgress: true,
-//             observe: 'events'
-//         })
-//         .pipe(
-//             finalize(() => this.reset())
-//         );
-      
-//         this.uploadSub = upload$.subscribe(event => {
-//           if (event.type == HttpEventType.UploadProgress) {
-//             this.uploadProgress = Math.round(100 * (event.loaded / event.total));
-//           }
-//         })
-//     }
-// }
+  postbutton() {
+    this.uploadSub = {
+      title: 'User',
+      description: this.blogdata,
+      img: this.fileName,
+    };
+    this.dataService.setNewUserInfo({
+      title: 'User',
+      description: this.blogdata,
+      img: this.fileName,
+    });
+    this.showMsg = true;
+  }
 
-// cancelUpload() {
-// this.uploadSub.unsubscribe();
-// this.reset();
-// }
+  cancelUpload() {
+    //this.uploadSub.unsubscribe();
+    this.reset();
+  }
 
-// reset() {
-// this.uploadProgress = null;
-// this.uploadSub = null;
-// }
-  
-  logout(){
+  reset() {
+    this.uploadProgress = null;
+    this.uploadSub = null;
+  }
+
+  logout() {
     this.router.navigate(['/signup']);
   }
   readfeed() {
     this.router.navigate(['/blogfeed']);
   }
-
 }

@@ -7,6 +7,16 @@
   border: blue;
   overflow: hidden;
 }
+.example-header-image {
+  background-size: cover;
+}
+.example-card {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 3%;
+  justify-content: center;
+}
+
 .section1 {
   height: fit-content;
   margin-bottom: 10%;
@@ -40,8 +50,7 @@
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: rgb(120, 120, 202);;
+  background-color: rgb(120, 120, 202);
   color: white;
   font-weight: 600;
 }
-

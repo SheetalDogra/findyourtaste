@@ -1,60 +1,98 @@
 <div class="toolbar" role="banner">
-  <img width="40" alt=" Logo" src="" />
+  <img width="60" alt=" Logo" src="assets\images\log.png" />
   <span class="title">Find Your Taste.... </span>
-  <span class="logout" type="reset" (click)="logout()">
-    Logout
-  </span>
+  <span class="logout" type="reset" (click)="logout()"> Logout </span>
 </div>
 <div class="container">
-<div class="card-container">
+  <div class="card-container">
     <mat-card class="card1">
       <mat-card-content>
-        <p  class="title">Write your own blog...</p>
-        <textarea matInput placeholder="Write here....."></textarea><br>
-        <!-- <input matInput [(ngModel)]="blog"> -->
-        <!-- <textarea matInput placeholder="Write here....."></textarea><br>
-        <input type="file" class="file-input"
-       [accept]="requiredFileType"
-       (change)="onFileSelected($event)" #fileUpload>
-       <div class="file-upload">
+        <p class="title">Write your own blog...</p>
+        <textarea
+          matInput
+          #textUpload
+          [(ngModel)]="blogdata"
+          placeholder="Write here....."
+        ></textarea
+        ><br />
+        <input
+          type="file"
+          accept="image/*"
+          class="file-input"
+          [accept]="requiredFileType"
+          (change)="onFileSelected($event)"
+          #fileUpload
+        /><br /><br />
+        <div>
+          <button class="btn btn-primary mr-1" (click)="postbutton()">
+            Post
+          </button>
 
-        {{fileName || "No file uploaded yet."}}
-     
-         <button mat-mini-fab color="primary" class="upload-btn"
-           (click)="fileUpload.click()">
-             <mat-icon>attach_file</mat-icon>
-     
-         </button>
-     
-     </div> -->
-     <!-- <div class="progress">
+          <button class="btn btn-secondary" (click)="cancelUpload()">
+            Cancel
+          </button>
+        </div>
 
-      <mat-progress-bar class="progress-bar" mode="determinate"
-                        [value]="uploadProgress" *ngIf="uploadProgress">
-    
-      </mat-progress-bar>
-    
-      <mat-icon class="cancel-upload" (click)="cancelUpload()" 
-                *ngIf="uploadProgress">delete_forever</mat-icon>
-    
-    </div> -->
-        <!-- <img mat-card-image  src="assets/images/writing-blog.jpg" alt="Photo"> -->
-        <button class="btn btn-primary mr-1">Post</button>
-        <button class="btn btn-secondary ">Cancel</button>
-        <img mat-card-image  src="assets/images/writing-blog.jpg" alt="Photo">
+        <div class="col-xs-6" *ngIf="showMsg">
+          <p class="alert alert-success">
+            <strong
+              >Successfully post.. For reading post click on " read
+              blogs"</strong
+            >
+          </p>
+          <img [src]="fileName" width="100px" height="100px" />
+        </div>
+
+        <!-- <div class="file-upload">
+          {{ fileName || "No file uploaded yet." }}
+
+          <button
+            mat-mini-fab
+            color="primary"
+            class="upload-btn"
+            (click)="fileUpload.click()">
+            <mat-icon>attach_file</mat-icon>
+          </button>
+        </div> -->
+
+        <!-- <button class="btn btn-primary mr-1">Post</button>
+        <button class="btn btn-secondary ">Cancel</button> -->
+        <div class="image" *ngIf="!showMsg">
+          <img
+            mat-card-image
+            src="assets/images/writing-blog.jpg"
+            alt="Photo"
+          />
+        </div>
       </mat-card-content>
     </mat-card>
     <mat-card class="card2">
       <mat-card-content>
-        <button style="background-color: aliceblue; border: none; padding: 5%; margin: 3%;"  class="title" (click)="readfeed()"> Read food blogs</button>
+        <button
+          style="
+            background-color: aliceblue;
+            border: none;
+            padding: 5%;
+            margin: 3%;
+          "
+          class="title"
+          (click)="readfeed()"
+        >
+          Read food blogs
+        </button>
 
-        <img mat-card-image (click)="readfeed()"  src="assets/images/read.png" alt="Photo">
+        <img
+          mat-card-image
+          (click)="readfeed()"
+          src="assets/images/read.png"
+          alt="Photo"
+        />
       </mat-card-content>
     </mat-card>
     <mat-card class="card3">
       <mat-card-content>
-        <p  class="title">Suggestion box</p>
-        <img mat-card-image  src="assets/images/suggestion.png" alt="Photo">
+        <p class="title">Suggestion box</p>
+        <img mat-card-image src="assets/images/suggestion.png" alt="Photo" />
       </mat-card-content>
     </mat-card>
   </div>
