@@ -64,4 +64,28 @@ export class HomepageComponent implements OnInit {
   readfeed() {
     this.router.navigate(['/blogfeed']);
   }
+
+  // images: Image[] = [];
+
+  // handleFileInput(event: any) {
+  //   const files = event.target.files;
+  //   if (files) {
+  //     for (let file of files) {
+  //       const reader = new FileReader();
+  //       reader.onload = (e: any) => {
+  //         this.images.push({ url: e.target.result, title: '' });
+  //       };
+  //       reader.readAsDataURL(file);
+  //     }
+  //   }
+
+  // uploadImages() {
+  //   // Perform image upload logic here
+  //   console.log('Uploaded Images:');
+  //   console.log(this.images);
+
+  //   // You can add your API calls or any other logic to handle image upload
+  // }
+
+  
 }

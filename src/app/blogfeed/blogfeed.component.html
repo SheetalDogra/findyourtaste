@@ -1,17 +1,17 @@
 <div class="toolbar" role="banner">
-  <img width="60" alt=" Logo" src="assets\images\log.png" />
-  <span class="title">Find Your Taste.... </span>
+ 
+  <span class="title">Travel Diaries.. </span>
   <span class="logout" type="reset" (click)="logout()"> Logout </span>
 </div>
 
 <div class="container">
   <div class="section1">
-    <img width="100%" src="assets/images/blgbg.png" />
-    <div class="centered">Food Blogs</div>
+    <img width="100%" src="assets/images/ta.jpg" />
+    <div class="centered">Travel Blogs</div>
   </div>
 
   <!-- Cards with media area -->
-
+<div>
   <mat-card class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
@@ -28,6 +28,38 @@
     </mat-card-actions>
   </mat-card>
 
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>USER</mat-card-title>
+    </mat-card-header>
+    <img mat-card-xl-image src="assets/images/aravi.jpg" />
+    <mat-card-content>
+      <h4 style="margin-top: 2%">{{ longText }}</h4>
+    </mat-card-content>
+    <mat-card-actions>
+      <button class="btn btn-primary mr-1">LIKE</button>
+      <button mat-button>COMMENT</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>USER</mat-card-title>
+    </mat-card-header>
+    <img mat-card-xl-image src="assets/images/traveler4.jpg" />
+    <mat-card-content>
+      <h4 style="margin-top: 2%">{{ longText }}</h4>
+    </mat-card-content>
+    <mat-card-actions>
+      <button class="btn btn-primary mr-1">LIKE</button>
+      <button mat-button>COMMENT</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
   <!-- <mat-card class="example-card">
     <mat-card-title-group>
       <mat-card-title>Shiba Inu</mat-card-title>

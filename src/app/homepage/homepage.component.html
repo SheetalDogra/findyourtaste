@@ -1,6 +1,6 @@
 <div class="toolbar" role="banner">
-  <img width="60" alt=" Logo" src="assets\images\log.png" />
-  <span class="title">Find Your Taste.... </span>
+  
+  <span class="title">Travel Diaries </span>
   <span class="logout" type="reset" (click)="logout()"> Logout </span>
 </div>
 <div class="container">
@@ -78,13 +78,13 @@
           class="title"
           (click)="readfeed()"
         >
-          Read food blogs
+          Read travel blogs
         </button>
 
         <img
           mat-card-image
           (click)="readfeed()"
-          src="assets/images/read.png"
+          src="assets/images/travel2.jpeg"
           alt="Photo"
         />
       </mat-card-content>
@@ -97,3 +97,16 @@
     </mat-card>
   </div>
 </div>
+
+<!-- 
+<div class="image-upload-container">
+  <h2>Upload Images</h2>
+  <div class="image-preview" *ngFor="let image of images">
+    <img [src]="image.url" alt="Preview" />
+    <input type="text" [(ngModel)]="image.title" placeholder="Image Title" />
+  </div>
+  <div>
+    <input type="file" (change)="handleFileInput($event)" accept="image/*" multiple />
+  </div>
+  <button (click)="uploadImages()">Upload</button>
+</div> -->

@@ -1,106 +1,118 @@
-<!-- Toolbar -->
 <div class="toolbar" role="banner">
-  <img width="60" alt=" Logo" src="assets\images\log.png" />
-  <span class="title">Find Your Taste.... </span>
+ 
+  <span class="title">Travel Diaries </span>
 </div>
-<!-- <div class="body" [ngStyle]="{ background: 'url(assets/images/img3.jpg)' }"> -->
-<div class="body">
-  <div class="content" role="main">
-    <!-- Highlight Card -->
-    <div class="card highlight-card card-small">
-      <span class="title">Read blogs or write your own blog</span>
-    </div>
 
-    <!-- Resources -->
-    <h2 class="Quotes">We're foodies...We discover food</h2>
-    <p class="Quotes">Life is uncertain. Eat dessert first.</p>
-
-    <div class="card-container">
-      <div class="card-body">
-        <h5 class="card-header">
-          Old user? <a routerLink="/Login">Click here to login..</a>
-        </h5>
-        <h5 class="card-header">Signup Here</h5>
-        <mat-card-content>
-          <form class="example-form">
-            <table class="example-full-width" cellspacing="5">
-              <tr>
-                <td>
-                  <mat-form-field
-                    class="example-full-width"
-                    style="width: 400px !important"
-                  >
-                    <input
-                      matInput
-                      placeholder="Username"
-                      [(ngModel)]="username"
-                      name="username"
-                      required
-                    />
-                  </mat-form-field>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <mat-form-field
-                    class="example-full-width"
-                    style="width: 400px !important"
-                  >
-                    <input
-                      matInput
-                      placeholder="Password"
-                      [(ngModel)]="password"
-                      type="password"
-                      name="password"
-                      required
-                    />
-                  </mat-form-field>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <mat-form-field
-                    class="example-full-width"
-                    style="width: 400px !important"
-                  >
-                    <input
-                      matInput
-                      placeholder="mail"
-                      [(ngModel)]="mail"
-                      type="mail"
-                      name="mail"
-                      required
-                    />
-                  </mat-form-field>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <mat-form-field
-                    class="example-full-width"
-                    style="width: 400px !important"
-                  >
-                    <input
-                      matInput
-                      placeholder="Contact no"
-                      [(ngModel)]="contact"
-                      type="number"
-                      name="number"
-                      required
-                    />
-                  </mat-form-field>
-                </td>
-              </tr>
-            </table>
-          </form>
-          <!-- <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner> -->
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-raised-button (click)="onSubmit()" color="primary">
-            Submit
-          </button>
-        </mat-card-actions>
+   
+ 
+  <!--Intro Section-->
+  <section class="view intro-2">
+    <div class="full-bg-img mask rgba-gradient">
+      <div class="container flex-center">
+        <div class="d-flex align-items-center content-height w-100">
+          <div class="row flex-center pt-5 mt-3 w-100">
+            <div class="col-md-6 text-center text-md-left mb-5">
+              <div class="white-text">
+                <h2 class="h1 h1-responsive font-bold wow fadeInLeft" data-wow-delay="0.3s">Sign up right now! </h2>
+                <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
+                <h4 class="wow fadeInLeft" data-wow-delay="0.3s" style="font-weight: bold;">travel blogs where people share real travel experience to various tourist destinations. The travelogues published here include experience at various thrilling and relaxing destinations like hill stations, houseboats, lakes, beaches, mountains, pilgrim places and much more.</h4>
+                <br>
+                <a mdbBtn color="white" outline="true" class="wow fadeInLeft waves-light" data-wow-delay="0.3s" mdbWavesEffect>Learn more</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-5 offset-xl-1">
+              <!--Form-->
+              <div class="wow fadeInRight" data-wow-delay="0.3s">
+                <h5 class="card-header">
+                  Old user? <a routerLink="/Login">Click here to login..</a>
+                </h5>
+                <h5 class="card-header">Signup Here</h5>
+                <mat-card-content>
+                  <form class="example-form">
+                    <table class="example-full-width" cellspacing="5">
+                      <tr>
+                        <td>
+                          <mat-form-field
+                            class="example-full-width"
+                            style="width: 400px !important"
+                          >
+                            <input
+                              matInput
+                              placeholder="Username"
+                              [(ngModel)]="username"
+                              name="username"
+                              required
+                            />
+                          </mat-form-field>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <mat-form-field
+                            class="example-full-width"
+                            style="width: 400px !important"
+                          >
+                            <input
+                              matInput
+                              placeholder="Password"
+                              [(ngModel)]="password"
+                              type="password"
+                              name="password"
+                              required
+                            />
+                          </mat-form-field>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <mat-form-field
+                            class="example-full-width"
+                            style="width: 400px !important"
+                          >
+                            <input
+                              matInput
+                              placeholder="mail"
+                              [(ngModel)]="mail"
+                              type="mail"
+                              name="mail"
+                              required
+                            />
+                          </mat-form-field>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <mat-form-field
+                            class="example-full-width"
+                            style="width: 400px !important"
+                          >
+                            <input
+                              matInput
+                              placeholder="Contact no"
+                              [(ngModel)]="contact"
+                              type="number"
+                              name="number"
+                              required
+                            />
+                          </mat-form-field>
+                        </td>
+                      </tr>
+                    </table>
+                  </form>
+                  <!-- <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner> -->
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-raised-button (click)="onSubmit()" color="primary">
+                    Submit
+                  </button>
+                </mat-card-actions>
+              </div>
+              <!--/.Form-->
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+  </section>
+
+<!--Main Navigation-->

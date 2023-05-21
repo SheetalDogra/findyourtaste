@@ -10,7 +10,7 @@ export class DataService {
 
   public blogdata = new BehaviorSubject<any>({
     title: ' User',
-    description: ' Hi There .... FOOD LOVERS',
+    description: ' Hi There .... Travel LOVERS',
     img: ''
   });
 

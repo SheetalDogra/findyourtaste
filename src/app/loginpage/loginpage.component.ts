@@ -13,6 +13,8 @@ export class LoginpageComponent implements OnInit {
   password: any;
   ngOnInit(): void {
   }
+  
+  
 
   login() : void {
     if(this.username == 'admin' && this.password == 'admin')

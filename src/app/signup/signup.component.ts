@@ -22,7 +22,9 @@ export class SignupComponent implements OnInit {
 
   onSubmit() {
     if (this.username == 'admin' && this.password == 'admin') {
+      alert('Sucessfully Login')
       this.router.navigate(['/Login']);
+     
     } else {
       alert('Invalid credentials');
     }
